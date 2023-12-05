@@ -1,0 +1,31 @@
+[package]
+name = "rocket-governor"
+version = "0.1.0-rc.4"
+edition = "2018"
+license = "MIT OR Apache-2.0"
+description = "Implementation of Governor rate limiter for Rocket"
+documentation = "https://docs.rs/rocket-governor"
+homepage = "https://github.com/kolbma/rocket-governor"
+repository = "https://github.com/kolbma/rocket-governor"
+keywords = ["rocket", "governor", "rate-limit", "rate-limiting", "ratelimit"]
+categories = ["web-programming"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package.metadata]
+# minimum supported rust version 1.59.0 because of 3rd level dependency dashmap
+msrv = "1.59.0"
+
+[package.metadata.docs.rs]
+all-features = true # get api doc for all features on https://docs.rs
+
+[dependencies]
+governor = "0.4"
+lazy_static = "1.4"
+# rocket = { path = "../rocket/core/lib" }
+# rocket = { git = "https://github.com/SergioBenitez/Rocket.git", branch = "v0.5-rc" }
+rocket = "0.5.0-rc.2"
+
+[features]
+limit_info = []
+logger = []
