@@ -5,6 +5,11 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+
+[lib]
+name = "InSilicoPCR_rocket_governor"
+path = "lib.rs"
+
 [dependencies]
 governor = "0.4"
 rocket = "0.5.0-rc.2"
