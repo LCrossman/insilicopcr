@@ -10,8 +10,6 @@ name = "InSilicoPCR"
 path = "src/lib.rs"
 
 [dependencies]
-governor = "0.4"
-lazy_static = "1.4"
 rocket-governor = { path = "src/rocket_governor" }
 aead = { version = "0.5.2", features = ["getrandom"] }
 chacha20poly1305 = { version = "0.9.0", features = ["stream", "heapless"] }
