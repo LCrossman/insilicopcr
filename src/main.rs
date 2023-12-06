@@ -1,7 +1,6 @@
 #[macro_use] extern crate rocket;
 
 mod paste_id;
-mod rocket_governor;
 use paste_id::PasteId;
 use sha256::try_digest;
 use InSilicoPCR::in_silico_pcr;
@@ -29,8 +28,8 @@ use rocket::form::{Form, FromForm};
 use rocket::request::FromParam;
 use rocket::{Request, Response};
 use rocket::fairing::{Fairing, Info, Kind};
-use rocket_governor::{Quota, RocketGovernable, RocketGovernor};
-use rocket_governor::rocket_governor_catcher;
+use in_silico_pcr_rocket_governor::{Quota, RocketGovernable, RocketGovernor};
+use in_silico_pcr_rocket_governor::rocket_governor_catcher;
 
 pub struct CORS;
 
