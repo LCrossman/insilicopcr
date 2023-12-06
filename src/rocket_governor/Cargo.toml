@@ -7,7 +7,7 @@ edition = "2021"
 
 
 [lib]
-name = "InSilicoPCR_rocket_governor"
+name = "in_silico_pcr_rocket_governor"
 path = "lib.rs"
 
 [dependencies]
